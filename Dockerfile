@@ -1,12 +1,14 @@
-FROM node:latest
+FROM node:19
 
 
 WORKDIR /app
 
-COPY package.json .
+COPY package.json /app
 
-COPY . .
+RUN npm install
+
+COPY . /app
 
 EXPOSE 80
 
-CMD ["npm", "start"]
+CMD node index.js

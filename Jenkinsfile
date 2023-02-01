@@ -9,11 +9,7 @@ pipeline     {
                 echo "Clone successfully!"
             }
         }
-        stage('NPM Build') {
-                steps {
-                     bat 'npm install'
-                }
-        }
+
         stage('Docker Build') {
             steps {
                 bat 'docker build -t 0f0f0f0f/react:latest .'
