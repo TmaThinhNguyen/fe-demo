@@ -3,7 +3,7 @@ pipeline     {
     stages {
         stage('Clone') {
             steps {
-                git url: 'https://github.com/TmaThinhNguyen/demo-FE.git',
+                git url: 'https://github.com/TmaThinhNguyen/fe-demo.git',
                     credentialsId: 'springdeploy-user',
                     branch: 'master'
                 echo "Clone successfully!"
