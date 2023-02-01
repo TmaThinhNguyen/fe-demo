@@ -9,9 +9,9 @@ pipeline     {
                 echo "Clone successfully!"
             }
         }
-        stage('Maven Build') {
+        stage('NPM Build') {
                 steps {
-                     bat 'mvn -B -DskipTests clean package'
+                     bat 'npm install'
                 }
         }
         stage('Docker Build') {
